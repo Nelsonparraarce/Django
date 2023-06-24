@@ -1,0 +1,73 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Funcionalidad de conteo de palabras</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    <style>
+        body {
+            background-color: {{ color|default:'#85C1E9' }};
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+
+        }
+        .description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white; 
+        }
+
+        .forms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: {{ color|default:'#1560B5' }};   
+            border: 2px solid red;
+            height:200px;
+        }
+
+        .formsresult {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: {{ color|default:'#000000' }};   
+            color: white;
+            border: 2px solid yellow;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Funcionalidad de conteo de palabras
+        </h1>
+    </div>
+    
+    <br/>
+    <div>
+        {% block index %}
+        {% endblock %}
+    </div>
+    <br/> 
+    <div>
+        {% block resultado %}
+        {% endblock %}
+    </div>
+
+
+
+</body>
+</html>

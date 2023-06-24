@@ -1,0 +1,43 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+
+{% block index %}
+<div class="description">
+ 
+    <h2>
+        Esta es una herramienta poderosa para analizar y oprtimizar tu contenido. Al contar palabras,    
+        puedes obtener informacion sobre la longitud y la estructura de tu texto, lo cual desempeña un   
+         papel crucial en captar y retener la atencion de tu audiencia        
+    </h2>
+
+</div>
+
+<br/>
+<div class="description">
+  
+    <h3>
+        Con esta funcionalidad puedes:
+    </h3>
+
+    <ul>
+        <li>Medir la legibilidad de tu contenido, identificando el numero total de palabras</li>
+        <li>Asegurarte de que tu texto cumpla con los requisitos de longitud deseados, como las publicaciones de blogs, actualizaciones en redes sociales o copias de anuncios</li>
+        <li>Analizar la distribucion de palabras clave para mejorar el SEO y aumentar la visibilidad del contenido</li>
+    </ul>
+
+</div>
+<br/>
+<div class="header">
+ <h1>Formulario</h1> 
+</div>
+<br/>
+<div class="forms">
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="CONTAR PALABRAS">
+    </form>
+</div>
+
+{% endblock %}
